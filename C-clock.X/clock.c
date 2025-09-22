@@ -11,4 +11,7 @@ void CLOCK_Initialize(void)
     
     /* Clock source = HFINTOSC, Clock Divider = 1 */
     OSCCON1 = 0x60;
+    
+    /* Clear clock switch flag */
+    PIR0 &= 0xF7; 
 }
